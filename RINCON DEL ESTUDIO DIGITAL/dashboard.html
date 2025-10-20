@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard - El Rincón del Estudio Digital</title>
+<style>
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+    margin: 0;
+    padding: 2rem;
+    color: #111827;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+  }
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .menu-item {
+    margin-bottom: 2rem;
+  }
+  .btn-area {
+    background-color: #e0e7ff;
+    color: #1e3a8a;
+    padding: 1rem 1.2rem;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    justify-content: space-between;
+    font-weight: 600;
+  }
+  .btn-area:hover {
+    background-color: #c7d2fe;
+    transform: translateY(-2px);
+  }
+  .btn-area span {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  .submenu {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    display: none;
+    flex-direction: column;
+  }
+  .submenu button {
+    padding: 0.8rem;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 0.6rem;
+    transition: background-color 0.2s ease;
+    text-align: left;
+    width: 100%;
+  }
+  .submenu button:hover {
+    background-color: #e0f2fe;
+  }
+
+  /* WhatsApp floating button */
+  #whatsappBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #25D366;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    z-index: 1000;
+  }
+  #whatsappBtn:hover {
+    transform: scale(1.1);
+  }
+  #whatsappBtn img {
+    width: 30px;
+    height: 30px;
+  }
+</style>
+</head>
+<body>
+
+<h1>El Rincón del Estudio Digital</h1>
+
+<main>
+  <!-- Razonamiento Matematico -->
+  <div class="menu-item">
+    <button class="btn-area" id="razMatBtn">∑ Razonamiento Matemático <span>+</span></button>
+   <div class="submenu" id="razMatSubmenu">
+  <button onclick="window.open('https://drive.google.com/file/d/1jHgr0uevoAYKyF8nlO_eFEb3772-klTj/view?usp=sharing', '_blank')">SITUACIONES LÓGICAS</button>
+  <button>RAZONAMIENTO LÓGICO</button>
+  <button>RAZONAMIENTO INDUCTIVO</button>
+  <button>RAZONAMIENTO DEDUCTIVO</button>
+  <button>PLANTEO DE ECUACIONES</button>
+  <button>ORDENAMIENTO DE INFORMACION VERDADES Y MENTIRAS</button>
+  <button>EDADES Y MOVILES</button>
+  <button>CRONOMETRIA</button>
+  <button>FRACCIONES Y TANTO POR CIENTO</button>
+  <button>SUCESIONES Y SERIES NUMERICAS</button>
+  <button>OPERACIONES MATEMATICAS</button>
+  <button>CORTES Y ESTACAS, CERTEZAS</button>
+  <button>RUTAS Y TRAYECTIRAS</button>
+  <button>MAXIMOS Y MINIMOS</button>
+  <button>INTRODUCCION AL ANALISIS COMBINATORIO</button>
+  <button>CALCULO Y PROBABILIDADES</button>
+  <button>SUFICIENCIA DE DATOS</button>
+  <button>EJERCICIOS PARA RESOLVER</button>
+</div>
+
+  <!-- Razonamiento Verbal -->
+  <div class="menu-item">
+    <button class="btn-area" id="razVerbalBtn">📚 Razonamiento Verbal <span>+</span></button>
+    <div class="submenu" id="razVerbalSubmenu">
+      <button>SINÓNIMOS</button>
+      <button>ANTÓNIMOS</button>
+      <button>ANALOGÍAS</button>
+      <button>COMPRENSIÓN DE LECTURA</button>
+      <button>HOMÓNIMOS</button>
+      <button>PARÓNIMOS</button>
+      <button>ORACIONES INCOMPLETAS</button>
+      <button>SERIES VERBALES</button>
+      <button>TÉRMINOS EXCLUIDOS</button>
+      <button>EXPRESIONES LATINAS</button>
+      <button>PRINCIPALES RAÍCES LATINAS</button>
+      <button>PRINCIPALES RAÍCES GRIEGAS</button>
+      <button>PREFIJOS GRIEGOS</button>
+      <button>SUFIJOS GRIEGOS</button>
+      <button>ORACIONES ELIMINADAS</button>
+      <button>CONECTORES O LLAMATIVOS</button>
+      <button>LECTURA</button>
+      <button>PRÁCTICA INTEGRAL</button>
+    </div>
+  </div>
+
+  <!-- Historia del Peru -->
+  <div class="menu-item">
+    <button class="btn-area" id="histPeruBtn">🇵🇪 Historia del Perú <span>+</span></button>
+    <div class="submenu" id="histPeruSubmenu">
+      <button>PREHISTORIA Y PRIMEROS POBLADORES</button>
+      <button>ÉPOCA INCAICA</button>
+      <button>CONQUISTA Y VIRREYNATO</button>
+      <button>INDEPENDENCIA</button>
+      <button>ÉPOCA REPUBLICANA</button>
+      <button>PREGUNTAS Y RESPUESTAS</button>
+    </div>
+  </div>
+
+  <!-- Historia Universal -->
+  <div class="menu-item">
+    <button class="btn-area" id="histUnivBtn">🌍 Historia Universal <span>+</span></button>
+    <div class="submenu" id="histUnivSubmenu">
+      <button>CONCEPTOS BÁSICOS</button>
+      <button>PREHISTORIA</button>
+      <button>EDAD ANTIGUA</button>
+      <button>EDAD MEDIA</button>
+      <button>EDAD MODERNA</button>
+      <button>EDAD CONTEMPORÁNEA</button>
+    </div>
+  </div>
+
+  <!-- Geografia -->
+  <div class="menu-item">
+    <button class="btn-area" id="geoBtn">🗺️ Geografía <span>+</span></button>
+    <div class="submenu" id="geoSubmenu">
+      <button>LA GEOGRAFÍA Y EL ESPACIO GEOGRÁFICO</button>
+      <button>EL GEOSISTEMA: DESCRIPCIÓN Y REPRESENTACIÓN</button>
+      <button>EL RELIEVE TERRESTRE</button>
+      <button>EL ESPACIO GEOGRÁFICO PERUANO</button>
+      <button>ESPACIO GEOGRÁFICO ANDINO: CARACTERÍSTICAS FÍSICAS</button>
+      <button>ESPACIO GEOGRÁFICO DE LA SELVA Y COSTA: CARACTERÍSTICAS FÍSICAS</button>
+      <button>HIDROGRAFÍA DEL PERÚ: RÍOS Y LAGOS</button>
+      <button>HIDROGRAFÍA DEL PERÚ: EL MAR PERUANO</button>
+      <button>ATMÓSFERA Y CLIMA</button>
+      <button>LOS RECURSOS NATURALES EN EL PERÚ</button>
+      <button>DINÁMICA POBLACIONAL EN EL PERÚ</button>
+      <button>ACTIVIDADES ECONÓMICAS EXTRACTIVAS EN EL PERÚ</button>
+      <button>ACTIVIDADES ECONÓMICAS REPRODUCTIVAS EN EL PERÚ</button>
+      <button>ACTIVIDADES ECONÓMICAS DISTRIBUTIVAS EN EL PERÚ - REDES VIALES</button>
+      <button>GEOGRAFÍA POLÍTICA Y GEOPOLÍTICA</button>
+      <button>ESPACIO GEOGRÁFICO DEL CUSCO</button>
+      <button>DIVISIÓN POLÍTICA Y ASPECTOS GEOGRÁFICOS DE ÁFRICA, ASIA, EUROPA, OCEANÍA</button>
+    </div>
+  </div>
+
+  <!-- Cultura General -->
+  <div class="menu-item">
+    <button class="btn-area" id="cultGenBtn">🎭 Cultura General <span>+</span></button>
+    <div class="submenu" id="cultGenSubmenu">
+      <button>CULTURA GENERAL DEL PERÚ</button>
+      <button>GEOGRAFÍA</button>
+      <button>HISTORIA Y ARQUEOLOGÍA</button>
+      <button>CULTURA ACTUAL</button>
+      <button>CULTURA GENERAL DEL MUNDO</button>
+      <button>GEOGRAFÍA</button>
+      <button>CIENCIA Y ASTRONOMÍA</button>
+      <button>HISTORIA Y ARTE</button>
+      <button>OTROS DATOS</button>
+    </div>
+  </div>
+
+  <!-- Inglés -->
+  <div class="menu-item">
+    <button class="btn-area" id="inglesBtn">汉 Inglés <span>+</span></button>
+    <div class="submenu" id="inglesSubmenu">
+      <button>La terminación ING</button>
+      <button>Is y Are</button>
+      <button>El adjetivo inglés</button>
+      <button>Examen de la primera lección</button>
+      <button>Meses del año</button>
+      <button>Pronombres personales</button>
+      <button>Tiempo presente</button>
+      <button>Gerundio</button>
+      <button>Tiempo futuro</button>
+      <button>Artículo indeterminado A y AN</button>
+      <button>Palabras internacionales</button>
+      <button>Palabras de la segunda lección</button>
+      <button>Examen de la segunda lección</button>
+      <button>Plural de los sustantivos</button>
+      <button>Invariabilidad de los adjetivos</button>
+      <button>Números</button>
+      <button>La terminación LY</button>
+      <button>Palabras compuestas</button>
+      <button>Números ordinales</button>
+      <button>Do y Make</button>
+      <button>Plural de los sustantivos terminados en Y</button>
+      <button>El verbo to have</button>
+      <button>El verbo to be</button>
+      <button>Verbos combinados con preposiciones</button>
+    </div>
+  </div>
+
+  <!-- Química -->
+  <div class="menu-item">
+    <button class="btn-area" id="quimBtn">🧪 Química <span>+</span></button>
+    <div class="submenu" id="quimSubmenu">
+      <button>Próximamente...</button>
+    </div>
+  </div>
+
+  <!-- Video Tutoriales -->
+  <div class="menu-item">
+    <button class="btn-area" id="videoConfBtn">🎥 Video Tutoriales <span>+</span></button>
+    <div class="submenu" id="videoConfSubmenu">
+      <button onclick="window.open('https://www.youtube.com/watch?v=LlaZGSIieUw', '_blank')">Razonamiento Matemático</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=O8CGGR48omk', '_blank')">Razonamiento Verbal</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=CbQriJrJJ_s', '_blank')">Historia del Perú</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=AYQ8hT8cVTE', '_blank')">Historia Universal</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=9xZBRk3TtQI', '_blank')">Cultura General</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=oeksGYoNaXE', '_blank')">Inglés</button>
+      <button onclick="window.open('https://www.youtube.com/watch?v=83N42xcxf2Y', '_blank')">Geografía</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- Botón WhatsApp -->
+<button id="whatsappBtn" title="Contáctanos por WhatsApp" aria-label="WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+</button>
+
+<script>
+  // Función para alternar visibilidad de submenús
+  function toggleSubmenu(buttonId, submenuId) {
+    const btn = document.getElementById(buttonId);
+    const submenu = document.getElementById(submenuId);
+
+    btn.addEventListener('click', () => {
+      const isVisible = submenu.style.display === 'flex';
+      // Ocultar todos los submenús primero
+      document.querySelectorAll('.submenu').forEach(sm => sm.style.display = 'none');
+      document.querySelectorAll('.btn-area span').forEach(sp => sp.textContent = '+');
+
+      if (!isVisible) {
+        submenu.style.display = 'flex';
+        // Cambiar signo a -
+        btn.querySelector('span').textContent = '-';
+      } else {
+        submenu.style.display = 'none';
+        btn.querySelector('span').textContent = '+';
+      }
+    });
+  }
+
+  // Inicializar toggles para todos los menús
+  toggleSubmenu('razMatBtn', 'razMatSubmenu');
+  toggleSubmenu('razVerbalBtn', 'razVerbalSubmenu');
+  toggleSubmenu('histPeruBtn', 'histPeruSubmenu');
+  toggleSubmenu('histUnivBtn', 'histUnivSubmenu');
+  toggleSubmenu('geoBtn', 'geoSubmenu');
+  toggleSubmenu('cultGenBtn', 'cultGenSubmenu');
+  toggleSubmenu('inglesBtn', 'inglesSubmenu');
+  toggleSubmenu('quimBtn', 'quimSubmenu');
+  toggleSubmenu('videoConfBtn', 'videoConfSubmenu');
+
+  // WhatsApp button event
+  document.getElementById('whatsappBtn').addEventListener('click', () => {
+    const numero = "916685713";
+    const mensaje = "Hola, tengo una consulta desde la plataforma educativa.";
+    const url = `https://wa.me/51${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+  });
+</script>
+
+</body>
+</html>
